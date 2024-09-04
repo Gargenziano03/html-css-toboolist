@@ -34,12 +34,13 @@
     color: grey;
 }
 
-.new_task, .editorial{
+.task1, .editorial {
     display: inline-block;
     vertical-align: middle;
-    ;
 }
-
+#con_1, #con_2, #con_3, #con_4, #con_5, #con_6, #con_7, #con_8{
+    display: block;
+}
 .editorial{
     border-style: solid;
     border-width:  6px;
@@ -48,6 +49,7 @@
     border-color: blue;
     color: aliceblue;
     border-radius: 10px;
+    margin: 2rem;
 }
 
 .slash{
@@ -58,3 +60,80 @@
     color: green;
     text-align: center;
 }
+
+.x{
+    border-radius: 50%;
+    border-width:  1px;
+    border-style: solid;
+    border-color: red;
+    color: red;
+    text-align: center;
+}
+
+
+
+.task2, .q1_goals, .recruiting, .mobile{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+    
+}
+
+.q1_goals {
+    border-style: solid;
+    border-width:  6px;
+    width: max-content;
+    background-color:gray;
+    border-color: grey;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.recruiting{
+    border-style: solid;
+    border-width:  6px;
+    width: max-content;
+    background-color: rgb(0, 110, 255);
+    border-color: rgb(0, 110, 255);
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.mobile{
+    border-style: solid;
+    border-width:  6px;
+    width: max-content;
+    background-color: orange;
+    border-color: orange;
+    color: aliceblue;
+    border-radius: 10px;
+
+}
+
+.task3, .website, .salve{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.website{
+    border-style: solid;
+    border-width:  6px;
+    width: max-content;
+    background-color: pink;
+    border-color: pink;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.salve{
+    border-style: solid;
+    border-width:  6px;
+    width: max-content;
+    background-color: greenyellow;
+    border-color: greenyellow;
+    color: aliceblue;
+    border-radius: 10px;
+}
+    
+
