@@ -1,139 +1,220 @@
-.logo {
-    display: inline-block;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.title {
-    display: inline-block;
-    vertical-align: middle;
-    
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--tob-page-bg);
 }
 
+
+:root {
+    --tob-black: #000;
+    --tob-white: #fff;
+    --tob-light: #c9ced3;
+    --tob-page-bg: #f6f8f9;
+    --tob-primary: #47adf1;
+    --tob-editorial-badge: #45abe9;
+    --tob-goals-badge: #9c72e4;
+    --tob-recruiting-badge: #64c0a9;
+    --tob-mobile-badge: #f29e33;
+    --tob-website-badge: #d863a0;
+    --tob-sales-badge: #b0c926;
+    --tob-checkmark-color: #77c9b5;
+    --tob-cross-color: #eb5a53;
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
+/* #endregion common */
+
+/* #region utilities */
 .container {
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
-.add_task,.add_section {
-    border-style: solid;
-    border-width: 1px;
-    width: max-content;
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 2px;
-}
-.add_task{
-    background-color: blue;
-    border-color: blue;
-    color: aliceblue;
-}
-.add_section{
-    border-color: grey;
-    color: grey;
+.card {
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: .5rem;
 }
 
-.task1, .editorial {
-    display: inline-block;
-    vertical-align: middle;
-}
-#con_1, #con_2, #con_3, #con_4, #con_5, #con_6, #con_7, #con_8{
-    display: block;
-}
-.editorial{
-    border-style: solid;
-    border-width:  6px;
-    width: max-content;
-    background-color: blue;
-    border-color: blue;
-    color: aliceblue;
-    border-radius: 10px;
-    margin: 2rem;
+.card-header,
+.card-body {
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
-.slash{
-    border-radius: 50%;
-    border-width:  1px;
-    border-style: solid;
-    border-color: green;
-    color: green;
+.buttons {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid var(--tob-page-bg);
+}
+
+.card-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+
+.badge {
+    color: var(--tob-white);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        background-color: #ededed;
+        border-radius: .375rem;
+        padding: 5px;
+    }
+
+}
+
+/* 
+    Css nesting 
+    ul.list-unstyled li
+*/
+ul.list-unstyled {
+    list-style: none;
+
+    li {
+        line-height: 2.5rem;
+    }
+
+}
+
+
+.icon {
+    font-size: 0.8rem;
+    display: inline-block;
+    border: 1px solid gray;
+    width: 1.15rem;
+    height: 1.15rem;
     text-align: center;
+    line-height: 1.15rem;
+    border-radius: 50%
 }
 
-.x{
-    border-radius: 50%;
-    border-width:  1px;
-    border-style: solid;
-    border-color: red;
-    color: red;
-    text-align: center;
+.checkmark {
+    border-color: var(--tob-checkmark-color);
+    color: var(--tob-checkmark-color);
+}
+
+.cross {
+    border-color: var(--tob-cross-color);
+    color: var(--tob-cross-color);
 }
 
 
+/* Colors */
+.bg-editorial {
+    background-color: var(--tob-editorial-badge);
+}
 
-.task2, .q1_goals, .recruiting, .mobile{
-    display: inline-block;
+.bg-goals {
+    background-color: var(--tob-goals-badge);
+}
+
+.bg-recruiting {
+    background-color: var(--tob-recruiting-badge);
+}
+
+.bg-mobile {
+    background-color: var(--tob-mobile-badge);
+}
+
+.bg-website {
+    background-color: var(--tob-website-badge);
+}
+
+.bg-sales {
+    background-color: var(--tob-sales-badge);
+}
+
+/* Buttons */
+.btn {
+    padding: .25rem 1rem;
+    border-radius: 0.25rem;
+    border-style: none;
+    background-color: transparent;
+}
+
+.button1 {
+    background-color: var(--tob-primary);
+    border: 1px solid var(--tob-primary);
+    color: var(--tob-white);
+}
+
+.button2 {
+    border: 1px solid var(--tob-light);
+    color: var(--tob-light);
+}
+
+
+/* #endregion utilities */
+
+
+/* #region header */
+#app_header {
+    background-color: var(--tob-white);
+    padding: 10px;
+}
+
+.logo>img, .logo>span {
     vertical-align: middle;
-    margin: 10px;
-    
 }
 
-.q1_goals {
-    border-style: solid;
-    border-width:  6px;
-    width: max-content;
-    background-color:gray;
-    border-color: grey;
-    color: aliceblue;
-    border-radius: 10px;
+.logo>span {
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
-.recruiting{
-    border-style: solid;
-    border-width:  6px;
-    width: max-content;
-    background-color: rgb(0, 110, 255);
-    border-color: rgb(0, 110, 255);
-    color: aliceblue;
-    border-radius: 10px;
+/* region main */
+
+main {
+    padding: 3rem 0;
 }
 
-.mobile{
-    border-style: solid;
-    border-width:  6px;
-    width: max-content;
-    background-color: orange;
-    border-color: orange;
-    color: aliceblue;
-    border-radius: 10px;
 
+section {
+    h3::before {
+        content: "👉";
+    }
 }
 
-.task3, .website, .salve{
-    display: inline-block;
-    vertical-align: middle;
-    margin: 10px;
+
+/* region main */
+
+/* And selector */
+h3.starred {
+    background-color: yellowgreen;
 }
 
-.website{
-    border-style: solid;
-    border-width:  6px;
-    width: max-content;
-    background-color: pink;
-    border-color: pink;
-    color: aliceblue;
-    border-radius: 10px;
+/* Attribute selector */
+input[type="text"]{
+    background-color: yellowgreen;
 }
 
-.salve{
-    border-style: solid;
-    border-width:  6px;
-    width: max-content;
-    background-color: greenyellow;
-    border-color: greenyellow;
-    color: aliceblue;
-    border-radius: 10px;
+[data-color="red"]{
+    background-color: red;
 }
-    
 
+div[class="starred"]  {
+    background-color: red;
+}
+
+div.starred {
+    background-color: purple;
+}
